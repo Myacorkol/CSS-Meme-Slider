@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #25282A;
+}
+.container{
+    width: 100%;
+}
+.midle{
+    max-width: 1900px;
+    width: 100%;
+    margin: 40px auto 0 auto;
+    position: relative;
+}
+.slider{
+    width: 1800px;
+    height: 700px;
+    overflow: hidden;
+}
+.slider-items{
+    width: 406%;
+    height: 100%;
+    display: flex;
+
+}
+.slide{
+    width: 25%;
+    transition: all .6s ease;
+}
+.slide__img{
+    width: 99%;
+    height: 80%;
+    border-radius: 40px;
+}
+.navigation{
+    position: absolute;
+    bottom: 8%;
+    right: -3%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.slider__bar{
+
+    width: 15px;
+    height: 15px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #7EAAF8;
+    opacity: .5;
+    border-radius: 50%;
+    transition: all .4s ease;
+    border: 2px solid #7EAAF8;
+    position: relative;
+}
+.slider__bar::after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* border: 15px solid #25282A; */
+    border: 14px solid #7EAAF8;
+    opacity: 0;
+}
+.slide__text{
+    color: #fff;
+    font-size: 24px;
+    line-height: 4;
+    padding-left: 4px;
+}
+.slider__bar:hover{
+    opacity: .8;
+    border: 2px solid #fff;
+    background-color: #fff;
+}
+
+input[name='r'] {
+    position: absolute;
+    visibility: hidden;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+#r1:checked ~ .navigation .bar1{
+    background-color: #25282A;
+    border: 2px solid #7EAAF8;
+}
+#r1:checked ~ .navigation .bar1:hover{
+    border-color: #fff;
+}
+
+#r2:checked ~ .navigation .bar2{
+    background-color: #25282A;
+    border: 2px solid #7EAAF8;
+}
+#r2:checked ~ .navigation .bar2:hover{
+    border-color: #fff;
+}
+#r3:checked ~ .navigation .bar3{
+    background-color: #25282A;
+    border: 2px solid #7EAAF8;
+}
+#r3:checked ~ .navigation .bar3:hover{
+    border-color: #fff;
+}
+#r4:checked ~ .navigation .bar4{
+    background-color: #25282A;
+    border: 2px solid #7EAAF8;
+}
+#r4:checked ~ .navigation .bar4:hover{
+    border-color: #fff;
+}
+
+@media (max-width: 1999px) {
+    .midle{
+        max-width: 1600px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1700px) {
+    .midle{
+        max-width: 1500px;
+        width: 100%;
+    }
+    .navigation {
+        right: -4%;
+    }
+}
+@media (max-width: 1588px) {
+    .midle{
+        max-width: 1350px;
+        width: 100%;
+    }
+
+}
+@media (max-width: 1462px) {
+    .midle{
+        max-width: 900px;
+        width: 100%;
+        height: 500px;
+    }
+    .slide{
+        width: 24.97%;
+    }
+    .slide__img {
+        border-radius: 25px;
+    }
+}
+@media (max-width: 958px) {
+    .midle{
+        max-width: 700px;
+        width: 100%;
+        height: 450px;
+    }
+    .slide__text {
+        font-size: 18px;
+        line-height: 3;
+    }
+    .navigation {
+        bottom: 10%;
+    }
+
+}
+@media (max-width: 748px) {
+    .midle{
+        max-width: 400px;
+        width: 100%;
+        height: 250px;
+    }
+    .slider-items {
+        width: 411%;
+    }
+    .slider__bar {
+        width: 8px;
+        height: 8px;
+    }
+    .slider__bar::after {
+        border: 9px solid #7EAAF8;
+    }
+    .navigation {
+        right: -12%;
+    }
+    .slide__img {
+        border-radius: 14px;
+    }
+    .slide__text {
+        font-size: 13px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 470px) {
+    .slide{
+        display: flex;
+        flex-direction: column;
+        gap: 56px;
+    }
+    .midle{
+        height: 280px;
+    }
+    .slide__img {
+        height: 60%;
+    }
+    .navigation {
+        right: 25%;
+        bottom: 25%;
+    }
+}
+@media (max-width: 431px) {
+    .slide{
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+    }
+    .midle{
+        max-width: 300px;
+    }
+    .slide__img {
+        height: 60%;
+    }
+    .navigation {
+        right: 18%;
+        bottom: 26%;
+    }
+}
+@media (max-width: 320px) {
+    .slide{
+        gap: 42px;
+    }
+    .midle{
+        max-width: 250px;
+    }
+    .slide__img {
+        height: 50%;
+    }
+}
+
+
+

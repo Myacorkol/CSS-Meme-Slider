@@ -189,6 +189,9 @@ input[name='r'] {
         width: 8px;
         height: 8px;
     }
+    .slider__bar::after {
+        border: 9px solid #7EAAF8;
+    }
     .navigation {
         right: -12%;
     }

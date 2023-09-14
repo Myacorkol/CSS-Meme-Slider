@@ -235,6 +235,17 @@ input[name='r'] {
         bottom: 26%;
     }
 }
+@media (max-width: 320px) {
+    .slide{
+        gap: 42px;
+    }
+    .midle{
+        max-width: 250px;
+    }
+    .slide__img {
+        height: 50%;
+    }
+}
 
 
 

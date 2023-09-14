@@ -42,6 +42,7 @@ body{
     display: flex;
 }
 .slider__bar{
+
     width: 15px;
     height: 15px;
     margin: 6px;
@@ -51,6 +52,18 @@ body{
     border-radius: 50%;
     transition: all .4s ease;
     border: 2px solid #7EAAF8;
+    position: relative;
+}
+.slider__bar::after{
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* border: 15px solid #25282A; */
+    border: 14px solid #7EAAF8;
+    opacity: 0;
 }
 .slide__text{
     color: #fff;
